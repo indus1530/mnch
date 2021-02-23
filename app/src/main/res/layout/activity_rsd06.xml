@@ -9,7 +9,7 @@
 
         <variable
             name="callback"
-            type="edu.aku.ramshasaeed.mnch.activities.Rsd06" />
+            type="edu.aku.abdulsajid.uenMnch.activities.Rsd06" />
     </data>
 
     <ScrollView
@@ -76,7 +76,7 @@
                                 android:hint="@string/numberhint"
                                 android:inputType="number"
                                 android:maxLength="4"
-                                android:text='@{rs0699.checked ?  "":rs06.getText.toString }'
+                                android:text='@{rs0699.checked ?  "":rs06.getText().toString() }'
                                 android:visibility='@{rs0699.checked ? View.GONE : View.VISIBLE }' />
 
                             <CheckBox
@@ -127,7 +127,7 @@
                                 android:hint="@string/numberhint"
                                 android:inputType="number"
                                 android:maxLength="4"
-                                android:text='@{rs4799.checked ?  "":rs47.getText.toString }'
+                                android:text='@{rs4799.checked ?  "":rs47.getText().toString() }'
                                 android:visibility='@{rs4799.checked ? View.GONE : View.VISIBLE }' />
 
                             <CheckBox
@@ -178,7 +178,7 @@
                                 android:hint="@string/numberhint"
                                 android:inputType="number"
                                 android:maxLength="4"
-                                android:text='@{rs4899.checked ?  "":rs48.getText.toString }'
+                                android:text='@{rs4899.checked ?  "":rs48.getText().toString() }'
                                 android:visibility='@{rs4899.checked ? View.GONE : View.VISIBLE }' />
 
                             <CheckBox

@@ -9,7 +9,7 @@
 
         <variable
             name="callback"
-            type="edu.aku.ramshasaeed.mnch.activities.Qoc2" />
+            type="edu.aku.abdulsajid.uenMnch.activities.Qoc2" />
     </data>
 
     <ScrollView
@@ -140,7 +140,7 @@
                             android:layout_width="match_parent"
                             android:layout_height="wrap_content"
                             android:inputType="text"
-                            android:text='@{qb0201aa.checked ?  "" : qb0201b.getText.toString }'/>
+                            android:text='@{qb0201aa.checked ?  "" : qb0201b.getText().toString() }' />
 
                     </LinearLayout>
 <!--
@@ -160,7 +160,7 @@
                         android:layout_height="wrap_content"
                         android:lines="3"
                         android:inputType="textMultiLine"
-                        android:text='@{qb0201aa.checked || qb0201ab.checked || qb0201a97.checked?  "" : qb0201c.getText.toString }'/>
+                        android:text='@{qb0201aa.checked || qb0201ab.checked || qb0201a97.checked?  "" : qb0201c.getText().toString() }'/>
 -->
 
                 </LinearLayout>
@@ -273,7 +273,7 @@
                             android:layout_width="match_parent"
                             android:layout_height="wrap_content"
                             android:inputType="text"
-                            android:text='@{qb0202aa.checked ?  "" : qb0202b.getText.toString }'/>
+                            android:text='@{qb0202aa.checked ?  "" : qb0202b.getText().toString() }' />
 
                     </LinearLayout>
 <!--
@@ -293,7 +293,7 @@
                         android:layout_height="wrap_content"
                         android:lines="3"
                         android:inputType="textMultiLine"
-                        android:text='@{qb0202aa.checked || qb0202ab.checked || qb0202a97.checked?  "" : qb0202c.getText.toString }'/>
+                        android:text='@{qb0202aa.checked || qb0202ab.checked || qb0202a97.checked?  "" : qb0202c.getText().toString() }'/>
 -->
 
                 </LinearLayout>
@@ -406,7 +406,7 @@
                             android:layout_width="match_parent"
                             android:layout_height="wrap_content"
                             android:inputType="text"
-                            android:text='@{qb0203aa.checked ?  "" : qb0203b.getText.toString }'/>
+                            android:text='@{qb0203aa.checked ?  "" : qb0203b.getText().toString() }' />
 
                     </LinearLayout>
 <!--
@@ -426,7 +426,7 @@
                         android:layout_height="wrap_content"
                         android:lines="3"
                         android:inputType="textMultiLine"
-                        android:text='@{qb0203aa.checked || qb0203ab.checked || qb0203a97.checked?  "" : qb0203c.getText.toString }'/>
+                        android:text='@{qb0203aa.checked || qb0203ab.checked || qb0203a97.checked?  "" : qb0203c.getText().toString() }'/>
 -->
 
                 </LinearLayout>

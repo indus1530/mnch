@@ -3,20 +3,21 @@
     xmlns:tools="http://schemas.android.com/tools"
     tools:context=".activities.Qoc1">
 
-    <data>
 
+    <data>
         <import type="android.view.View" />
 
         <variable
             name="callback"
-            type="edu.aku.ramshasaeed.mnch.activities.Qoc1" />
-
+            type="edu.aku.abdulsajid.uenMnch.activities.Qoc1" />
     </data>
+
 
     <ScrollView
         android:layout_width="match_parent"
         android:layout_height="match_parent"
         android:background="@color/dullWhile">
+
 
         <LinearLayout
             android:id="@+id/llqoc1"
@@ -27,6 +28,7 @@
             android:animateLayoutChanges="true"
             android:background="@color/dullWhile"
             android:orientation="vertical">
+
 
             <TextView
                 style="@style/textViewCenterGravity"
@@ -104,7 +106,7 @@
                             android:layout_width="match_parent"
                             android:layout_height="wrap_content"
                             android:inputType="text"
-                            android:text='@{qa0101aa.checked ?  "" : qa0101b.getText.toString }'/>
+                            android:text='@{qa0101aa.checked ?  "" : qa0101b.getText().toString() }'/>
 
                     </LinearLayout>
 
@@ -123,277 +125,166 @@
                         android:layout_height="wrap_content"
                         android:lines="3"
                         android:inputType="textMultiLine"
-                        android:text='@{qa0101aa.checked || qa0101ab.checked || qa0101a97.checked?  "" : qa0101c.getText.toString }'/>
+                        android:text='@{qa0101aa.checked || qa0101ab.checked || qa0101a97.checked?  "" : qa0101c.getText().toString() }'/>
 
                 </LinearLayout>
 
             </android.support.v7.widget.CardView>-->
 
+
             <!--qa0101-->
-            <android.support.v7.widget.CardView style="@style/cardView">
+            <android.support.v7.widget.CardView
+                android:id="@+id/cvqa0101"
+                style="@style/cardView">
 
-                <LinearLayout style="@style/linerlayout_view">
-
-                    <TextView
-                        android:layout_width="match_parent"
-                        android:layout_height="wrap_content"
-                        android:padding="5sp"
-                        android:background="@color/colorPrimaryDark"
-                        android:textSize="23sp"
-                        android:text="@string/qa0101"
-                        android:elevation="1dp"/>
-
-                    <TextView
-                        style="@style/h_textview"
-                        android:text="@string/s02r03"
-                        android:elevation="1dp"/>
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical">
 
                     <LinearLayout
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
-                        android:background="@color/white"
                         android:orientation="horizontal">
 
-                        <LinearLayout
-                            android:layout_width="0dp"
+                        <TextView
+                            style="@style/quesNum"
+                            android:layout_width="wrap_content"
                             android:layout_height="match_parent"
-                            android:background="@color/white"
-                            android:layout_weight="3"
-                            android:orientation="vertical">
-
-                            <TextView
-                                android:layout_width="match_parent"
-                                android:layout_height="55dp"
-                                android:background="@color/white"
-                                android:gravity="center"
-                                android:text="@string/yes"
-                                android:textColor="@color/black" />
-
-                            <TextView
-                                android:layout_width="match_parent"
-                                android:layout_height="55dp"
-                                android:background="@color/white"
-                                android:gravity="center"
-                                android:text="@string/no"
-                                android:textColor="@color/black" />
-
-                            <TextView
-                                android:layout_width="match_parent"
-                                android:layout_height="55dp"
-                                android:background="@color/white"
-                                android:gravity="center"
-                                android:text="@string/nap"
-                                android:textColor="@color/black" />
-
-                        </LinearLayout>
-
-
-                        <RadioGroup
-                            android:id="@+id/qa0101a"
-                            android:layout_width="0dp"
-                            android:layout_height="wrap_content"
-                            android:gravity="center"
-                            android:padding="5sp"
-                            android:layout_weight="3">
-
-                            <RadioButton
-                                android:id="@+id/qa0101aa"
-                                android:layout_width="wrap_content"
-                                android:layout_height="55dp"/>
-
-                            <RadioButton
-                                android:id="@+id/qa0101ab"
-                                android:layout_width="wrap_content"
-                                android:layout_height="55dp"/>
-
-                            <RadioButton
-                                android:id="@+id/qa0101a97"
-                                android:layout_width="wrap_content"
-                                android:layout_height="55dp"/>
-
-                        </RadioGroup>
-
-                    </LinearLayout>
-
-
-                    <LinearLayout
-                        android:layout_width="match_parent"
-                        android:layout_height="wrap_content"
-                        android:orientation="vertical"
-                        android:visibility='@{qa0101ab.checked ? View.VISIBLE : View.GONE }'>
+                            android:text="qa0101" />
 
                         <TextView
                             android:layout_width="match_parent"
-                            android:layout_height="wrap_content"
-                            android:textSize="20sp"
-                            android:layout_gravity="center_vertical"
-                            android:background="@color/colorPrimary"
-                            android:text="@string/inr"/>
-
-                        <EditText
-                            android:id="@+id/qa0101b"
-                            android:layout_width="match_parent"
-                            android:layout_height="wrap_content"
-                            android:inputType="text"
-                            android:text='@{qa0101aa.checked ?  "" : qa0101b.getText.toString }'/>
+                            android:layout_height="match_parent"
+                            android:text="@string/qa0101" />
 
                     </LinearLayout>
-<!--
 
                     <TextView
+                        style="@style/h_textview"
+                        android:elevation="1dp"
+                        android:text="@string/s02r03" />
+
+                    <RadioGroup
+                        android:id="@+id/qa0101a"
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
-                        android:textSize="20sp"
-                        android:layout_gravity="center_vertical"
-                        android:background="@color/colorPrimary"
-                        android:text="@string/qaAp" />
+                        android:orientation="horizontal">
 
+                        <RadioButton
+                            android:id="@+id/qa0101aa"
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="1"
+                            android:text="@string/yes" />
+
+                        <RadioButton
+                            android:id="@+id/qa0101ab"
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="1"
+                            android:text="@string/no" />
+
+                        <RadioButton
+                            android:id="@+id/qa0101a97"
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="1"
+                            android:text="@string/nap" />
+
+                    </RadioGroup>
 
                     <EditText
-                        android:id="@+id/qa0101c"
+                        android:id="@+id/qa0101b"
+                        style="@style/textInput"
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
-                        android:lines="3"
-                        android:inputType="textMultiLine"
-                        android:text='@{qa0101aa.checked || qa0101ab.checked || qa0101a97.checked?  "" : qa0101c.getText.toString }'/>
--->
+                        android:hint="@string/inr"
+                        android:inputType="text"
+                        android:text='@{qa0101ab.checked ?  qa0101b.getText().toString() : "" }'
+                        android:visibility='@{qa0101ab.checked ? View.VISIBLE : View.GONE }' />
+
                 </LinearLayout>
 
-
             </android.support.v7.widget.CardView>
+
 
             <!--qa0102-->
-            <android.support.v7.widget.CardView style="@style/cardView">
+            <android.support.v7.widget.CardView
+                android:id="@+id/cvqa0102"
+                style="@style/cardView">
 
-                <LinearLayout style="@style/linerlayout_view">
-
-                    <TextView
-                        android:layout_width="match_parent"
-                        android:layout_height="wrap_content"
-                        android:padding="5sp"
-                        android:background="@color/colorPrimaryDark"
-                        android:textSize="23sp"
-                        android:text="@string/qa0102"
-                        android:elevation="1dp"/>
-
-                    <TextView
-                        style="@style/h_textview"
-                        android:text="@string/s02r03"
-                        android:elevation="1dp"/>
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical">
 
                     <LinearLayout
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
-                        android:background="@color/white"
                         android:orientation="horizontal">
 
-                        <LinearLayout
-                            android:layout_width="0dp"
+                        <TextView
+                            style="@style/quesNum"
+                            android:layout_width="wrap_content"
                             android:layout_height="match_parent"
-                            android:background="@color/white"
-                            android:layout_weight="3"
-                            android:orientation="vertical">
-
-                            <TextView
-                                android:layout_width="match_parent"
-                                android:layout_height="55dp"
-                                android:background="@color/white"
-                                android:gravity="center"
-                                android:text="@string/yes"
-                                android:textColor="@color/black" />
-
-                            <TextView
-                                android:layout_width="match_parent"
-                                android:layout_height="55dp"
-                                android:background="@color/white"
-                                android:gravity="center"
-                                android:text="@string/no"
-                                android:textColor="@color/black" />
-
-                            <TextView
-                                android:layout_width="match_parent"
-                                android:layout_height="55dp"
-                                android:background="@color/white"
-                                android:gravity="center"
-                                android:text="@string/nap"
-                                android:textColor="@color/black" />
-
-                        </LinearLayout>
-
-
-                        <RadioGroup
-                            android:id="@+id/qa0102a"
-                            android:layout_width="0dp"
-                            android:layout_height="wrap_content"
-                            android:gravity="center"
-                            android:padding="5sp"
-                            android:layout_weight="3">
-
-                            <RadioButton
-                                android:id="@+id/qa0102aa"
-                                android:layout_width="wrap_content"
-                                android:layout_height="55dp"/>
-
-                            <RadioButton
-                                android:id="@+id/qa0102ab"
-                                android:layout_width="wrap_content"
-                                android:layout_height="55dp"/>
-
-                            <RadioButton
-                                android:id="@+id/qa0102a97"
-                                android:layout_width="wrap_content"
-                                android:layout_height="55dp"/>
-
-                        </RadioGroup>
-
-                    </LinearLayout>
-
-
-                    <LinearLayout
-                        android:layout_width="match_parent"
-                        android:layout_height="wrap_content"
-                        android:orientation="vertical"
-                        android:visibility='@{qa0102ab.checked ? View.VISIBLE : View.GONE }'>
+                            android:text="qa0102" />
 
                         <TextView
                             android:layout_width="match_parent"
-                            android:layout_height="wrap_content"
-                            android:textSize="20sp"
-                            android:layout_gravity="center_vertical"
-                            android:background="@color/colorPrimary"
-                            android:text="@string/inr"/>
-
-                        <EditText
-                            android:id="@+id/qa0102b"
-                            android:layout_width="match_parent"
-                            android:layout_height="wrap_content"
-                            android:inputType="text"
-                            android:text='@{qa0102aa.checked ?  "" : qa0102b.getText.toString }'/>
+                            android:layout_height="match_parent"
+                            android:text="@string/qa0102" />
 
                     </LinearLayout>
-<!--
 
                     <TextView
+                        style="@style/h_textview"
+                        android:elevation="1dp"
+                        android:text="@string/s02r03" />
+
+                    <RadioGroup
+                        android:id="@+id/qa0102a"
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
-                        android:textSize="20sp"
-                        android:layout_gravity="center_vertical"
-                        android:background="@color/colorPrimary"
-                        android:text="@string/qaAp" />
+                        android:orientation="horizontal">
 
+                        <RadioButton
+                            android:id="@+id/qa0102aa"
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="1"
+                            android:text="@string/yes" />
+
+                        <RadioButton
+                            android:id="@+id/qa0102ab"
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="1"
+                            android:text="@string/no" />
+
+                        <RadioButton
+                            android:id="@+id/qa0102a97"
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="1"
+                            android:text="@string/nap" />
+
+                    </RadioGroup>
 
                     <EditText
-                        android:id="@+id/qa0102c"
+                        android:id="@+id/qa0102b"
+                        style="@style/textInput"
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
-                        android:lines="3"
-                        android:inputType="textMultiLine"
-                        android:text='@{qa0102aa.checked || qa0102ab.checked || qa0102a97.checked?  "" : qa0102c.getText.toString }'/>
--->
+                        android:hint="@string/inr"
+                        android:inputType="text"
+                        android:text='@{qa0102ab.checked ?  qa0102b.getText().toString() : "" }'
+                        android:visibility='@{qa0102ab.checked ? View.VISIBLE : View.GONE }' />
 
                 </LinearLayout>
 
             </android.support.v7.widget.CardView>
+
 
             <!--qa0103-->
             <android.support.v7.widget.CardView style="@style/cardView">
@@ -501,7 +392,7 @@
                             android:layout_width="match_parent"
                             android:layout_height="wrap_content"
                             android:inputType="text"
-                            android:text='@{qa0103aa.checked ?  "" : qa0103b.getText.toString }'/>
+                            android:text='@{qa0103aa.checked ?  "" : qa0103b.getText().toString() }' />
 
                     </LinearLayout>
 <!--
@@ -521,7 +412,7 @@
                         android:layout_height="wrap_content"
                         android:lines="3"
                         android:inputType="textMultiLine"
-                        android:text='@{qa0103aa.checked || qa0103ab.checked || qa0103a97.checked?  "" : qa0103c.getText.toString }'/>
+                        android:text='@{qa0103aa.checked || qa0103ab.checked || qa0103a97.checked?  "" : qa0103c.getText().toString() }'/>
 -->
 
                 </LinearLayout>
@@ -634,7 +525,7 @@
                             android:layout_width="match_parent"
                             android:layout_height="wrap_content"
                             android:inputType="text"
-                            android:text='@{qa0104aa.checked ?  "" : qa0104b.getText.toString }'/>
+                            android:text='@{qa0104aa.checked ?  "" : qa0104b.getText().toString() }' />
 
                     </LinearLayout>
 <!--
@@ -654,7 +545,7 @@
                         android:layout_height="wrap_content"
                         android:lines="3"
                         android:inputType="textMultiLine"
-                        android:text='@{qa0104aa.checked || qa0104ab.checked || qa0104a97.checked?  "" : qa0104c.getText.toString }'/>
+                        android:text='@{qa0104aa.checked || qa0104ab.checked || qa0104a97.checked?  "" : qa0104c.getText().toString() }'/>
 -->
 
                 </LinearLayout>
@@ -767,7 +658,7 @@
                             android:layout_width="match_parent"
                             android:layout_height="wrap_content"
                             android:inputType="text"
-                            android:text='@{qa0105aa.checked ?  "" : qa0105b.getText.toString }'/>
+                            android:text='@{qa0105aa.checked ?  "" : qa0105b.getText().toString() }' />
 
                     </LinearLayout>
 <!--
@@ -787,7 +678,7 @@
                         android:layout_height="wrap_content"
                         android:lines="3"
                         android:inputType="textMultiLine"
-                        android:text='@{qa0105aa.checked || qa0105ab.checked || qa0105a97.checked?  "" : qa0105c.getText.toString }'/>
+                        android:text='@{qa0105aa.checked || qa0105ab.checked || qa0105a97.checked?  "" : qa0105c.getText().toString() }'/>
 -->
 
                 </LinearLayout>
@@ -900,7 +791,7 @@
                             android:layout_width="match_parent"
                             android:layout_height="wrap_content"
                             android:inputType="text"
-                            android:text='@{qa0106aa.checked ?  "" : qa0106b.getText.toString }'/>
+                            android:text='@{qa0106aa.checked ?  "" : qa0106b.getText().toString() }' />
 
                     </LinearLayout>
 <!--
@@ -920,7 +811,7 @@
                         android:layout_height="wrap_content"
                         android:lines="3"
                         android:inputType="textMultiLine"
-                        android:text='@{qa0106aa.checked || qa0106ab.checked || qa0106a97.checked?  "" : qa0106c.getText.toString }'/>
+                        android:text='@{qa0106aa.checked || qa0106ab.checked || qa0106a97.checked?  "" : qa0106c.getText().toString() }'/>
 -->
 
                 </LinearLayout>
@@ -1033,7 +924,7 @@
                             android:layout_width="match_parent"
                             android:layout_height="wrap_content"
                             android:inputType="text"
-                            android:text='@{qa0107aa.checked ?  "" : qa0107b.getText.toString }'/>
+                            android:text='@{qa0107aa.checked ?  "" : qa0107b.getText().toString() }' />
 
                     </LinearLayout>
 <!--
@@ -1053,7 +944,7 @@
                         android:layout_height="wrap_content"
                         android:lines="3"
                         android:inputType="textMultiLine"
-                        android:text='@{qa0107aa.checked || qa0107ab.checked || qa0107a97.checked?  "" : qa0107c.getText.toString }'/>
+                        android:text='@{qa0107aa.checked || qa0107ab.checked || qa0107a97.checked?  "" : qa0107c.getText().toString() }'/>
 -->
 
                 </LinearLayout>
@@ -1166,7 +1057,7 @@
                             android:layout_width="match_parent"
                             android:layout_height="wrap_content"
                             android:inputType="text"
-                            android:text='@{qa0108aa.checked ?  "" : qa0108b.getText.toString }'/>
+                            android:text='@{qa0108aa.checked ?  "" : qa0108b.getText().toString() }' />
 
                     </LinearLayout>
 <!--
@@ -1186,7 +1077,7 @@
                         android:layout_height="wrap_content"
                         android:lines="3"
                         android:inputType="textMultiLine"
-                        android:text='@{qa0108aa.checked || qa0108ab.checked || qa0108a97.checked?  "" : qa0108c.getText.toString }'/>
+                        android:text='@{qa0108aa.checked || qa0108ab.checked || qa0108a97.checked?  "" : qa0108c.getText().toString() }'/>
 -->
 
                 </LinearLayout>
@@ -1299,7 +1190,7 @@
                             android:layout_width="match_parent"
                             android:layout_height="wrap_content"
                             android:inputType="text"
-                            android:text='@{qa0109aa.checked ?  "" : qa0109b.getText.toString }'/>
+                            android:text='@{qa0109aa.checked ?  "" : qa0109b.getText().toString() }' />
 
                     </LinearLayout>
 <!--
@@ -1319,7 +1210,7 @@
                         android:layout_height="wrap_content"
                         android:lines="3"
                         android:inputType="textMultiLine"
-                        android:text='@{qa0109aa.checked || qa0109ab.checked || qa0109a97.checked?  "" : qa0109c.getText.toString }'/>
+                        android:text='@{qa0109aa.checked || qa0109ab.checked || qa0109a97.checked?  "" : qa0109c.getText().toString() }'/>
 -->
 
                 </LinearLayout>
@@ -1432,7 +1323,7 @@
                             android:layout_width="match_parent"
                             android:layout_height="wrap_content"
                             android:inputType="text"
-                            android:text='@{qa0110aa.checked ?  "" : qa0110b.getText.toString }'/>
+                            android:text='@{qa0110aa.checked ?  "" : qa0110b.getText().toString() }' />
 
                     </LinearLayout>
 <!--
@@ -1452,7 +1343,7 @@
                         android:layout_height="wrap_content"
                         android:lines="3"
                         android:inputType="textMultiLine"
-                        android:text='@{qa0110aa.checked || qa0110ab.checked || qa0110a97.checked?  "" : qa0110c.getText.toString }'/>
+                        android:text='@{qa0110aa.checked || qa0110ab.checked || qa0110a97.checked?  "" : qa0110c.getText().toString() }'/>
 -->
 
                 </LinearLayout>
@@ -1565,7 +1456,7 @@
                             android:layout_width="match_parent"
                             android:layout_height="wrap_content"
                             android:inputType="text"
-                            android:text='@{qa0111aa.checked ?  "" : qa0111b.getText.toString }'/>
+                            android:text='@{qa0111aa.checked ?  "" : qa0111b.getText().toString() }' />
 
                     </LinearLayout>
 <!--
@@ -1585,7 +1476,7 @@
                         android:layout_height="wrap_content"
                         android:lines="3"
                         android:inputType="textMultiLine"
-                        android:text='@{qa0111aa.checked || qa0111ab.checked || qa0111a97.checked?  "" : qa0111c.getText.toString }'/>
+                        android:text='@{qa0111aa.checked || qa0111ab.checked || qa0111a97.checked?  "" : qa0111c.getText().toString() }'/>
 -->
 
                 </LinearLayout>
@@ -1698,7 +1589,7 @@
                             android:layout_width="match_parent"
                             android:layout_height="wrap_content"
                             android:inputType="text"
-                            android:text='@{qa0112aa.checked ?  "" : qa0112b.getText.toString }'/>
+                            android:text='@{qa0112aa.checked ?  "" : qa0112b.getText().toString() }' />
 
                     </LinearLayout>
 <!--
@@ -1718,7 +1609,7 @@
                         android:layout_height="wrap_content"
                         android:lines="3"
                         android:inputType="textMultiLine"
-                        android:text='@{qa0112aa.checked || qa0112ab.checked || qa0112a97.checked?  "" : qa0112c.getText.toString }'/>
+                        android:text='@{qa0112aa.checked || qa0112ab.checked || qa0112a97.checked?  "" : qa0112c.getText().toString() }'/>
 -->
 
                 </LinearLayout>
@@ -1831,7 +1722,7 @@
                             android:layout_width="match_parent"
                             android:layout_height="wrap_content"
                             android:inputType="text"
-                            android:text='@{qa0113aa.checked ?  "" : qa0113b.getText.toString }'/>
+                            android:text='@{qa0113aa.checked ?  "" : qa0113b.getText().toString() }' />
 
                     </LinearLayout>
 <!--
@@ -1851,7 +1742,7 @@
                         android:layout_height="wrap_content"
                         android:lines="3"
                         android:inputType="textMultiLine"
-                        android:text='@{qa0113aa.checked || qa0113ab.checked || qa0113a97.checked?  "" : qa0113c.getText.toString }'/>
+                        android:text='@{qa0113aa.checked || qa0113ab.checked || qa0113a97.checked?  "" : qa0113c.getText().toString() }'/>
 -->
 
                 </LinearLayout>
@@ -1964,7 +1855,7 @@
                             android:layout_width="match_parent"
                             android:layout_height="wrap_content"
                             android:inputType="text"
-                            android:text='@{qa0114aa.checked ?  "" : qa0114b.getText.toString }'/>
+                            android:text='@{qa0114aa.checked ?  "" : qa0114b.getText().toString() }' />
 
                     </LinearLayout>
 <!--
@@ -1984,7 +1875,7 @@
                         android:layout_height="wrap_content"
                         android:lines="3"
                         android:inputType="textMultiLine"
-                        android:text='@{qa0114aa.checked || qa0114ab.checked || qa0114a97.checked?  "" : qa0114c.getText.toString }'/>
+                        android:text='@{qa0114aa.checked || qa0114ab.checked || qa0114a97.checked?  "" : qa0114c.getText().toString() }'/>
 -->
 
                 </LinearLayout>
@@ -2097,7 +1988,7 @@
                             android:layout_width="match_parent"
                             android:layout_height="wrap_content"
                             android:inputType="text"
-                            android:text='@{qa0115aa.checked ?  "" : qa0115b.getText.toString }'/>
+                            android:text='@{qa0115aa.checked ?  "" : qa0115b.getText().toString() }' />
 
                     </LinearLayout>
 <!--
@@ -2117,7 +2008,7 @@
                         android:layout_height="wrap_content"
                         android:lines="3"
                         android:inputType="textMultiLine"
-                        android:text='@{qa0115aa.checked || qa0115ab.checked || qa0115a97.checked?  "" : qa0115c.getText.toString }'/>
+                        android:text='@{qa0115aa.checked || qa0115ab.checked || qa0115a97.checked?  "" : qa0115c.getText().toString() }'/>
 -->
 
                 </LinearLayout>
@@ -2230,7 +2121,7 @@
                             android:layout_width="match_parent"
                             android:layout_height="wrap_content"
                             android:inputType="text"
-                            android:text='@{qa0116aa.checked ?  "" : qa0116b.getText.toString }'/>
+                            android:text='@{qa0116aa.checked ?  "" : qa0116b.getText().toString() }' />
 
                     </LinearLayout>
 <!--
@@ -2250,7 +2141,7 @@
                         android:layout_height="wrap_content"
                         android:lines="3"
                         android:inputType="textMultiLine"
-                        android:text='@{qa0116aa.checked || qa0116ab.checked || qa0116a97.checked?  "" : qa0116c.getText.toString }'/>
+                        android:text='@{qa0116aa.checked || qa0116ab.checked || qa0116a97.checked?  "" : qa0116c.getText().toString() }'/>
 -->
 
                 </LinearLayout>
@@ -2259,18 +2150,32 @@
 
 
             <!--qa01AP-->
-            <android.support.v7.widget.CardView style="@style/cardView">
+            <android.support.v7.widget.CardView
+                android:id="@+id/cvqa01AP"
+                style="@style/cardView">
 
-                <LinearLayout style="@style/linerlayout_view">
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical">
 
-                    <TextView
+                    <LinearLayout
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
-                        android:padding="5sp"
-                        android:background="@color/colorPrimaryDark"
-                        android:textSize="23sp"
-                        android:text="@string/qaAp"
-                        android:elevation="1dp"/>
+                        android:orientation="horizontal">
+
+                        <TextView
+                            style="@style/quesNum"
+                            android:layout_width="wrap_content"
+                            android:layout_height="match_parent"
+                            android:text="qaAp" />
+
+                        <TextView
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:text="@string/qaAp" />
+
+                    </LinearLayout>
 
                     <EditText
                         android:id="@+id/qa01AP"
@@ -2282,6 +2187,7 @@
                 </LinearLayout>
 
             </android.support.v7.widget.CardView>
+
 
 
             <!--  = = = = =  END OF FORM FIELDS  = = = = = -->
@@ -2319,6 +2225,7 @@
                     android:textStyle="bold" />
 
             </LinearLayout>
+            <!--  = = = = =  END OF FORM FIELDS  = = = = = -->
 
         </LinearLayout>
 

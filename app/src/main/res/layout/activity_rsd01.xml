@@ -3,24 +3,27 @@
     xmlns:tools="http://schemas.android.com/tools"
     tools:context=".activities.Rsd01">
 
-    <data>
 
+    <data>
         <import type="android.view.View" />
 
         <variable
             name="callback"
-            type="edu.aku.ramshasaeed.mnch.activities.Rsd01" />
+            type="edu.aku.abdulsajid.uenMnch.activities.Rsd01" />
     </data>
 
+
     <ScrollView
-        android:id="@+id/rsd_scrollview"
         android:layout_width="match_parent"
         android:layout_height="match_parent"
         android:background="@color/dullWhile">
 
+
         <LinearLayout
+            android:id="@+id/grName"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
+            android:padding="5dp"
             android:layout_marginLeft="8dp"
             android:layout_marginRight="8dp"
             android:animateLayoutChanges="true"
@@ -34,310 +37,328 @@
                 android:elevation="5dp"
                 android:text="@string/rshint01" />
 
-            <android.support.v7.widget.CardView
-                style="@style/cardView"
-                android:layout_marginLeft="3dp"
-                android:layout_marginTop="@null"
-                android:layout_marginRight="3dp">
 
-                <LinearLayout
-                    style="@style/linerlayout_view"
-                    android:paddingRight="5dp">
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical">
 
 
-                    <!--RS01 STARTS HERE-->
+                <!--RS01 STARTS HERE-->
+                <android.support.v7.widget.CardView
+                    android:id="@+id/cvrs01"
+                    style="@style/cardView">
+
                     <LinearLayout
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
-                        android:orientation="horizontal">
-
-                        <TextView
-                            style="@style/textViewstartAlignGravity"
-                            android:layout_marginLeft="10dp"
-                            android:layout_marginTop="10dp"
-                            android:layout_marginBottom="10dp"
-                            android:layout_weight="3"
-                            android:text="@string/rs01" />
+                        android:orientation="vertical">
 
                         <LinearLayout
-                            android:layout_width="0dp"
+                            android:layout_width="match_parent"
                             android:layout_height="wrap_content"
-                            android:layout_weight="1"
-                            android:orientation="vertical">
+                            android:orientation="horizontal">
+
+                            <TextView
+                                style="@style/quesNum"
+                                android:layout_width="wrap_content"
+                                android:layout_height="match_parent"
+                                android:text="rs01" />
+
+                            <TextView
+                                android:layout_width="match_parent"
+                                android:layout_height="match_parent"
+                                android:text="@string/rs01" />
+
+                        </LinearLayout>
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="10dp"
+                            android:orientation="horizontal">
 
                             <EditText
                                 android:id="@+id/rs01"
                                 style="@style/textInput"
-                                android:layout_width="match_parent"
+                                android:layout_width="0dp"
                                 android:layout_height="wrap_content"
-                                android:layout_marginLeft="2dp"
-                                android:layout_marginTop="8dp"
-                                android:layout_marginRight="2dp"
+                                android:layout_weight="1"
                                 android:gravity="center"
                                 android:hint="@string/numberhint"
                                 android:inputType="number"
                                 android:maxLength="4"
-                                android:text='@{rs0199.checked ?  "":rs01.getText.toString }'
-                                android:visibility='@{rs0199.checked ? View.GONE : View.VISIBLE }' />
+                                android:enabled='@{rs0199.checked ? false : true }'
+                                android:text='@{rs0199.checked ?  "" : rs01.getText().toString() }' />
 
                             <CheckBox
                                 android:id="@+id/rs0199"
-                                android:layout_width="match_parent"
+                                android:layout_width="0dp"
                                 android:layout_height="wrap_content"
-                                android:layout_gravity="center"
-                                android:layout_marginRight="3dp"
-                                android:gravity="center"
-                                android:text="@string/msing"
-                                android:textColor="@color/gray"
-                                android:textSize="16sp" />
+                                android:layout_weight="1"
+                                android:tag="-1"
+                                android:text="@string/msing" />
+
                         </LinearLayout>
 
                     </LinearLayout>
-                    <!--RS01 ENDS HERE-->
+
+                </android.support.v7.widget.CardView>
+                <!--RS01 ENDS HERE-->
 
 
-                    <!--RS02 STARTS HERE-->
-                    <View
-                        android:layout_width="match_parent"
-                        android:layout_height="1dp"
-                        android:layout_marginStart="30dp"
-                        android:layout_marginEnd="30dp"
-                        android:background="@android:color/darker_gray"
-                        android:paddingTop="5dp" />
+                <!--rs02 STARTS HERE-->
+                <android.support.v7.widget.CardView
+                    android:id="@+id/cvrs02"
+                    style="@style/cardView">
 
                     <LinearLayout
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
-                        android:orientation="horizontal">
-
-                        <TextView
-                            style="@style/textViewstartAlignGravity"
-                            android:layout_marginLeft="10dp"
-                            android:layout_marginTop="10dp"
-                            android:layout_marginBottom="10dp"
-                            android:layout_weight="3"
-                            android:text="@string/rs02" />
+                        android:orientation="vertical">
 
                         <LinearLayout
-                            android:layout_width="0dp"
+                            android:layout_width="match_parent"
                             android:layout_height="wrap_content"
-                            android:layout_weight="1"
-                            android:orientation="vertical">
+                            android:orientation="horizontal">
+
+                            <TextView
+                                style="@style/quesNum"
+                                android:layout_width="wrap_content"
+                                android:layout_height="match_parent"
+                                android:text="rs02" />
+
+                            <TextView
+                                android:layout_width="match_parent"
+                                android:layout_height="match_parent"
+                                android:text="@string/rs02" />
+
+                        </LinearLayout>
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="10dp"
+                            android:orientation="horizontal">
 
                             <EditText
                                 android:id="@+id/rs02"
                                 style="@style/textInput"
-                                android:layout_width="match_parent"
+                                android:layout_width="0dp"
                                 android:layout_height="wrap_content"
-                                android:layout_marginLeft="2dp"
-                                android:layout_marginTop="8dp"
-                                android:layout_marginRight="2dp"
+                                android:layout_weight="1"
                                 android:gravity="center"
                                 android:hint="@string/numberhint"
                                 android:inputType="number"
                                 android:maxLength="4"
-                                android:text='@{rs0299.checked ?  "":rs02.getText.toString }'
-                                android:visibility='@{rs0299.checked ? View.GONE : View.VISIBLE }' />
+                                android:enabled='@{rs0299.checked ? false : true }'
+                                android:text='@{rs0299.checked ?  "" : rs02.getText().toString() }' />
 
                             <CheckBox
                                 android:id="@+id/rs0299"
-                                android:layout_width="match_parent"
+                                android:layout_width="0dp"
                                 android:layout_height="wrap_content"
-                                android:layout_gravity="center"
-                                android:layout_marginRight="3dp"
-                                android:gravity="center"
-                                android:text="@string/msing"
-                                android:textColor="@color/gray"
-                                android:textSize="16sp" />
+                                android:layout_weight="1"
+                                android:tag="-1"
+                                android:text="@string/msing" />
 
                         </LinearLayout>
 
                     </LinearLayout>
-                    <!--RS02 ENDS HERE-->
+
+                </android.support.v7.widget.CardView>
+                <!--rs02 ENDS HERE-->
 
 
-                    <!--RS03 STARTS HERE-->
-                    <View
-                        android:layout_width="match_parent"
-                        android:layout_height="1dp"
-                        android:layout_marginStart="30dp"
-                        android:layout_marginEnd="30dp"
-                        android:background="@android:color/darker_gray"
-                        android:paddingTop="5dp" />
+                <!--rs03 STARTS HERE-->
+                <android.support.v7.widget.CardView
+                    android:id="@+id/cvrs03"
+                    style="@style/cardView">
 
                     <LinearLayout
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
-                        android:orientation="horizontal">
-
-                        <TextView
-                            style="@style/textViewstartAlignGravity"
-                            android:layout_marginLeft="10dp"
-                            android:layout_marginTop="10dp"
-                            android:layout_marginBottom="10dp"
-                            android:layout_weight="3"
-                            android:text="@string/rs03" />
+                        android:orientation="vertical">
 
                         <LinearLayout
-                            android:layout_width="0dp"
+                            android:layout_width="match_parent"
                             android:layout_height="wrap_content"
-                            android:layout_weight="1"
-                            android:orientation="vertical">
+                            android:orientation="horizontal">
+
+                            <TextView
+                                style="@style/quesNum"
+                                android:layout_width="wrap_content"
+                                android:layout_height="match_parent"
+                                android:text="rs03" />
+
+                            <TextView
+                                android:layout_width="match_parent"
+                                android:layout_height="match_parent"
+                                android:text="@string/rs03" />
+
+                        </LinearLayout>
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="10dp"
+                            android:orientation="horizontal">
 
                             <EditText
                                 android:id="@+id/rs03"
                                 style="@style/textInput"
-                                android:layout_width="match_parent"
+                                android:layout_width="0dp"
                                 android:layout_height="wrap_content"
-                                android:layout_marginLeft="2dp"
-                                android:layout_marginTop="8dp"
-                                android:layout_marginRight="2dp"
+                                android:layout_weight="1"
                                 android:gravity="center"
                                 android:hint="@string/numberhint"
                                 android:inputType="number"
                                 android:maxLength="4"
-                                android:text='@{rs0399.checked ?  "":rs03.getText.toString }'
-                                android:visibility='@{rs0399.checked ? View.GONE : View.VISIBLE }' />
+                                android:enabled='@{rs0399.checked ? false : true }'
+                                android:text='@{rs0399.checked ?  "" : rs03.getText().toString() }' />
 
                             <CheckBox
                                 android:id="@+id/rs0399"
-                                android:layout_width="match_parent"
+                                android:layout_width="0dp"
                                 android:layout_height="wrap_content"
-                                android:layout_gravity="center"
-                                android:layout_marginRight="3dp"
-                                android:gravity="center"
-                                android:text="@string/msing"
-                                android:textColor="@color/gray"
-                                android:textSize="16sp" />
+                                android:layout_weight="1"
+                                android:tag="-1"
+                                android:text="@string/msing" />
 
                         </LinearLayout>
 
                     </LinearLayout>
-                    <!--RS03 ENDS HERE-->
+
+                </android.support.v7.widget.CardView>
+                <!--rs03 ENDS HERE-->
 
 
-                    <!--RS04 STARTS HERE-->
-                    <View
-                        android:layout_width="match_parent"
-                        android:layout_height="1dp"
-                        android:layout_marginStart="30dp"
-                        android:layout_marginEnd="30dp"
-                        android:background="@android:color/darker_gray"
-                        android:paddingTop="5dp" />
+                <!--rs04 STARTS HERE-->
+                <android.support.v7.widget.CardView
+                    android:id="@+id/cvrs04"
+                    style="@style/cardView">
 
                     <LinearLayout
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
-                        android:orientation="horizontal">
-
-                        <TextView
-                            style="@style/textViewstartAlignGravity"
-                            android:layout_marginLeft="10dp"
-                            android:layout_marginTop="10dp"
-                            android:layout_marginBottom="10dp"
-                            android:layout_weight="3"
-                            android:text="@string/rs04" />
+                        android:orientation="vertical">
 
                         <LinearLayout
-                            android:layout_width="0dp"
+                            android:layout_width="match_parent"
                             android:layout_height="wrap_content"
-                            android:layout_weight="1"
-                            android:orientation="vertical">
+                            android:orientation="horizontal">
+
+                            <TextView
+                                style="@style/quesNum"
+                                android:layout_width="wrap_content"
+                                android:layout_height="match_parent"
+                                android:text="rs04" />
+
+                            <TextView
+                                android:layout_width="match_parent"
+                                android:layout_height="match_parent"
+                                android:text="@string/rs04" />
+
+                        </LinearLayout>
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="10dp"
+                            android:orientation="horizontal">
 
                             <EditText
                                 android:id="@+id/rs04"
                                 style="@style/textInput"
-                                android:layout_width="match_parent"
+                                android:layout_width="0dp"
                                 android:layout_height="wrap_content"
-                                android:layout_marginLeft="2dp"
-                                android:layout_marginTop="8dp"
-                                android:layout_marginRight="2dp"
+                                android:layout_weight="1"
                                 android:gravity="center"
                                 android:hint="@string/numberhint"
                                 android:inputType="number"
                                 android:maxLength="4"
-                                android:text='@{rs0499.checked ?  "":rs04.getText.toString }'
-                                android:visibility='@{rs0499.checked ? View.GONE : View.VISIBLE }' />
+                                android:enabled='@{rs0499.checked ? false : true }'
+                                android:text='@{rs0499.checked ?  "" : rs04.getText().toString() }' />
 
                             <CheckBox
                                 android:id="@+id/rs0499"
-                                android:layout_width="match_parent"
+                                android:layout_width="0dp"
                                 android:layout_height="wrap_content"
-                                android:layout_gravity="center"
-                                android:layout_marginRight="3dp"
-                                android:gravity="center"
-                                android:text="@string/msing"
-                                android:textColor="@color/gray"
-                                android:textSize="16sp" />
+                                android:layout_weight="1"
+                                android:tag="-1"
+                                android:text="@string/msing" />
 
                         </LinearLayout>
 
                     </LinearLayout>
-                    <!--RS04 ENDS HERE-->
+
+                </android.support.v7.widget.CardView>
+                <!--rs04 ENDS HERE-->
 
 
-                    <!--RS05 STARTS HERE-->
-                    <View
-                        android:layout_width="match_parent"
-                        android:layout_height="1dp"
-                        android:layout_marginStart="30dp"
-                        android:layout_marginEnd="30dp"
-                        android:background="@android:color/darker_gray"
-                        android:paddingTop="5dp" />
+                <!--rs05 STARTS HERE-->
+                <android.support.v7.widget.CardView
+                    android:id="@+id/cvrs05"
+                    style="@style/cardView">
 
                     <LinearLayout
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
-                        android:orientation="horizontal">
-
-                        <TextView
-                            style="@style/textViewstartAlignGravity"
-                            android:layout_marginLeft="10dp"
-                            android:layout_marginTop="10dp"
-                            android:layout_marginBottom="10dp"
-                            android:layout_weight="3"
-                            android:text="@string/rs05" />
+                        android:orientation="vertical">
 
                         <LinearLayout
-                            android:layout_width="0dp"
+                            android:layout_width="match_parent"
                             android:layout_height="wrap_content"
-                            android:layout_weight="1"
-                            android:orientation="vertical">
+                            android:orientation="horizontal">
+
+                            <TextView
+                                style="@style/quesNum"
+                                android:layout_width="wrap_content"
+                                android:layout_height="match_parent"
+                                android:text="rs05" />
+
+                            <TextView
+                                android:layout_width="match_parent"
+                                android:layout_height="match_parent"
+                                android:text="@string/rs05" />
+
+                        </LinearLayout>
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="10dp"
+                            android:orientation="horizontal">
 
                             <EditText
                                 android:id="@+id/rs05"
                                 style="@style/textInput"
-                                android:layout_width="match_parent"
+                                android:layout_width="0dp"
                                 android:layout_height="wrap_content"
-                                android:layout_marginLeft="2dp"
-                                android:layout_marginTop="8dp"
-                                android:layout_marginRight="2dp"
+                                android:layout_weight="1"
                                 android:gravity="center"
                                 android:hint="@string/numberhint"
                                 android:inputType="number"
                                 android:maxLength="4"
-                                android:text='@{rs0599.checked ?  "":rs05.getText.toString }'
-                                android:visibility='@{rs0599.checked ? View.GONE : View.VISIBLE }' />
+                                android:enabled='@{rs0599.checked ? false : true }'
+                                android:text='@{rs0599.checked ?  "" : rs05.getText().toString() }' />
 
                             <CheckBox
                                 android:id="@+id/rs0599"
-                                android:layout_width="match_parent"
+                                android:layout_width="0dp"
                                 android:layout_height="wrap_content"
-                                android:layout_gravity="center"
-                                android:layout_marginRight="3dp"
-                                android:gravity="center"
-                                android:text="@string/msing"
-                                android:textColor="@color/gray"
-                                android:textSize="16sp" />
+                                android:layout_weight="1"
+                                android:tag="-1"
+                                android:text="@string/msing" />
 
                         </LinearLayout>
 
                     </LinearLayout>
-                    <!--RS05 ENDS HERE-->
 
-                </LinearLayout>
+                </android.support.v7.widget.CardView>
+                <!--rs05 ENDS HERE-->
 
-            </android.support.v7.widget.CardView>
+            </LinearLayout>
             <!--SECTION 01 ENDS HERE-->
 
 
@@ -389,7 +410,7 @@
                                 android:hint="@string/numberhint"
                                 android:inputType="number"
                                 android:maxLength="4"
-                                android:text='@{rs0699.checked ?  "":rs06.getText.toString }'
+                                android:text='@{rs0699.checked ?  "":rs06.getText().toString() }'
                                 android:visibility='@{rs0699.checked ? View.GONE : View.VISIBLE }' />
 
                             <CheckBox
@@ -462,7 +483,7 @@
                                 android:hint="@string/numberhint"
                                 android:inputType="number"
                                 android:maxLength="4"
-                                android:text='@{rs0799.checked ?  "":rs07.getText.toString }'
+                                android:text='@{rs0799.checked ?  "":rs07.getText().toString() }'
                                 android:visibility='@{rs0799.checked ? View.GONE : View.VISIBLE }' />
 
                             <CheckBox
@@ -522,7 +543,7 @@
                                 android:hint="@string/numberhint"
                                 android:inputType="number"
                                 android:maxLength="4"
-                                android:text='@{rs0899.checked ?  "":rs08.getText.toString }'
+                                android:text='@{rs0899.checked ?  "":rs08.getText().toString() }'
                                 android:visibility='@{rs0899.checked ? View.GONE : View.VISIBLE }' />
 
                             <CheckBox
@@ -595,7 +616,7 @@
                                 android:hint="@string/numberhint"
                                 android:inputType="number"
                                 android:maxLength="4"
-                                android:text='@{rs0999.checked ?  "":rs09.getText.toString }'
+                                android:text='@{rs0999.checked ?  "":rs09.getText().toString() }'
                                 android:visibility='@{rs0999.checked ? View.GONE : View.VISIBLE }' />
 
                             <CheckBox
@@ -655,7 +676,7 @@
                                 android:hint="@string/numberhint"
                                 android:inputType="number"
                                 android:maxLength="4"
-                                android:text='@{rs1099.checked ?  "":rs10.getText.toString }'
+                                android:text='@{rs1099.checked ?  "":rs10.getText().toString() }'
                                 android:visibility='@{rs1099.checked ? View.GONE : View.VISIBLE }' />
 
                             <CheckBox
@@ -715,7 +736,7 @@
                                 android:hint="@string/numberhint"
                                 android:inputType="number"
                                 android:maxLength="4"
-                                android:text='@{rs1199.checked ?  "":rs11.getText.toString }'
+                                android:text='@{rs1199.checked ?  "":rs11.getText().toString() }'
                                 android:visibility='@{rs1199.checked ? View.GONE : View.VISIBLE }' />
 
                             <CheckBox
@@ -775,7 +796,7 @@
                                 android:hint="@string/numberhint"
                                 android:inputType="number"
                                 android:maxLength="4"
-                                android:text='@{rs1299.checked ?  "":rs12.getText.toString }'
+                                android:text='@{rs1299.checked ?  "":rs12.getText().toString() }'
                                 android:visibility='@{rs1299.checked ? View.GONE : View.VISIBLE }' />
 
                             <CheckBox
@@ -835,7 +856,7 @@
                                 android:hint="@string/numberhint"
                                 android:inputType="number"
                                 android:maxLength="4"
-                                android:text='@{rs1399.checked ?  "":rs13.getText.toString }'
+                                android:text='@{rs1399.checked ?  "":rs13.getText().toString() }'
                                 android:visibility='@{rs1399.checked ? View.GONE : View.VISIBLE }' />
 
                             <CheckBox
@@ -895,7 +916,7 @@
                                 android:hint="@string/numberhint"
                                 android:inputType="number"
                                 android:maxLength="4"
-                                android:text='@{rs1499.checked ?  "":rs14.getText.toString }'
+                                android:text='@{rs1499.checked ?  "":rs14.getText().toString() }'
                                 android:visibility='@{rs1499.checked ? View.GONE : View.VISIBLE }' />
 
                             <CheckBox
@@ -955,7 +976,7 @@
                                 android:hint="@string/numberhint"
                                 android:inputType="number"
                                 android:maxLength="4"
-                                android:text='@{rs1599.checked ?  "":rs15.getText.toString }'
+                                android:text='@{rs1599.checked ?  "":rs15.getText().toString() }'
                                 android:visibility='@{rs1599.checked ? View.GONE : View.VISIBLE }' />
 
                             <CheckBox
@@ -1015,7 +1036,7 @@
                                 android:hint="@string/numberhint"
                                 android:inputType="number"
                                 android:maxLength="4"
-                                android:text='@{rs1699.checked ?  "":rs16.getText.toString }'
+                                android:text='@{rs1699.checked ?  "":rs16.getText().toString() }'
                                 android:visibility='@{rs1699.checked ? View.GONE : View.VISIBLE }' />
 
                             <CheckBox
@@ -1075,7 +1096,7 @@
                                 android:hint="@string/numberhint"
                                 android:inputType="number"
                                 android:maxLength="4"
-                                android:text='@{rs1799.checked ?  "":rs17.getText.toString }'
+                                android:text='@{rs1799.checked ?  "":rs17.getText().toString() }'
                                 android:visibility='@{rs1799.checked ? View.GONE : View.VISIBLE }' />
 
                             <CheckBox
@@ -1135,7 +1156,7 @@
                                 android:hint="@string/numberhint"
                                 android:inputType="number"
                                 android:maxLength="4"
-                                android:text='@{rs1899.checked ?  "":rs18.getText.toString }'
+                                android:text='@{rs1899.checked ?  "":rs18.getText().toString() }'
                                 android:visibility='@{rs1899.checked ? View.GONE : View.VISIBLE }' />
 
                             <CheckBox
@@ -1195,7 +1216,7 @@
                                 android:hint="@string/numberhint"
                                 android:inputType="number"
                                 android:maxLength="4"
-                                android:text='@{rs1999.checked ?  "":rs19.getText.toString }'
+                                android:text='@{rs1999.checked ?  "":rs19.getText().toString() }'
                                 android:visibility='@{rs1999.checked ? View.GONE : View.VISIBLE }' />
 
                             <CheckBox
@@ -1255,7 +1276,7 @@
                                 android:hint="@string/numberhint"
                                 android:inputType="number"
                                 android:maxLength="4"
-                                android:text='@{rs2099.checked ?  "" : rs20.getText.toString }'
+                                android:text='@{rs2099.checked ?  "" : rs20.getText().toString() }'
                                 android:visibility='@{rs2099.checked ? View.GONE : View.VISIBLE }' />
 
                             <CheckBox
@@ -1315,7 +1336,7 @@
                                 android:hint="@string/numberhint"
                                 android:inputType="number"
                                 android:maxLength="4"
-                                android:text='@{rs2199.checked ?  "":rs21.getText.toString }'
+                                android:text='@{rs2199.checked ?  "":rs21.getText().toString() }'
                                 android:visibility='@{rs2199.checked ? View.GONE : View.VISIBLE }' />
 
                             <CheckBox
@@ -1444,7 +1465,7 @@
                                 android:hint="@string/numberhint"
                                 android:inputType="number"
                                 android:maxLength="4"
-                                android:text='@{rs2399.checked ?  "":rs23.getText.toString }'
+                                android:text='@{rs2399.checked ?  "":rs23.getText().toString() }'
                                 android:visibility='@{rs2399.checked ? View.GONE : View.VISIBLE }' />
 
                             <CheckBox
@@ -1504,7 +1525,7 @@
                                 android:hint="@string/numberhint"
                                 android:inputType="number"
                                 android:maxLength="4"
-                                android:text='@{rs2499.checked ?  "":rs24.getText.toString }'
+                                android:text='@{rs2499.checked ?  "":rs24.getText().toString() }'
                                 android:visibility='@{rs2499.checked ? View.GONE : View.VISIBLE }' />
 
                             <CheckBox
@@ -1564,7 +1585,7 @@
                                 android:hint="@string/numberhint"
                                 android:inputType="number"
                                 android:maxLength="4"
-                                android:text='@{rs2599.checked ?  "":rs25.getText.toString }'
+                                android:text='@{rs2599.checked ?  "":rs25.getText().toString() }'
                                 android:visibility='@{rs2599.checked ? View.GONE : View.VISIBLE }' />
 
                             <CheckBox
@@ -1624,7 +1645,7 @@
                                 android:hint="@string/numberhint"
                                 android:inputType="number"
                                 android:maxLength="4"
-                                android:text='@{rs2699.checked ?  "":rs26.getText.toString }'
+                                android:text='@{rs2699.checked ?  "":rs26.getText().toString() }'
                                 android:visibility='@{rs2699.checked ? View.GONE : View.VISIBLE }' />
 
                             <CheckBox
@@ -1684,7 +1705,7 @@
                                 android:hint="@string/numberhint"
                                 android:inputType="number"
                                 android:maxLength="4"
-                                android:text='@{rs2999.checked ?  "":rs29.getText.toString }'
+                                android:text='@{rs2999.checked ?  "":rs29.getText().toString() }'
                                 android:visibility='@{rs2999.checked ? View.GONE : View.VISIBLE }' />
 
                             <CheckBox
@@ -1756,7 +1777,7 @@
                                 android:hint="@string/numberhint"
                                 android:inputType="number"
                                 android:maxLength="4"
-                                android:text='@{rs3699.checked ?  "":rs36.getText.toString }'
+                                android:text='@{rs3699.checked ?  "":rs36.getText().toString() }'
                                 android:visibility='@{rs3699.checked ? View.GONE : View.VISIBLE }' />
 
                             <CheckBox
@@ -1829,7 +1850,7 @@
                                 android:hint="@string/numberhint"
                                 android:inputType="number"
                                 android:maxLength="4"
-                                android:text='@{rs3099.checked ?  "":rs30.getText.toString }'
+                                android:text='@{rs3099.checked ?  "":rs30.getText().toString() }'
                                 android:visibility='@{rs3099.checked ? View.GONE : View.VISIBLE }' />
 
                             <CheckBox
@@ -1889,7 +1910,7 @@
                                 android:hint="@string/numberhint"
                                 android:inputType="number"
                                 android:maxLength="4"
-                                android:text='@{rs3399.checked ?  "":rs33.getText.toString }'
+                                android:text='@{rs3399.checked ?  "":rs33.getText().toString() }'
                                 android:visibility='@{rs3399.checked ? View.GONE : View.VISIBLE }' />
 
                             <CheckBox
@@ -1949,7 +1970,7 @@
                                 android:hint="@string/numberhint"
                                 android:inputType="number"
                                 android:maxLength="4"
-                                android:text='@{rs3799.checked ?  "":rs37.getText.toString }'
+                                android:text='@{rs3799.checked ?  "":rs37.getText().toString() }'
                                 android:visibility='@{rs3799.checked ? View.GONE : View.VISIBLE }' />
 
                             <CheckBox
@@ -2009,7 +2030,7 @@
                                 android:hint="@string/numberhint"
                                 android:inputType="number"
                                 android:maxLength="4"
-                                android:text='@{rs3899.checked ?  "":rs38.getText.toString }'
+                                android:text='@{rs3899.checked ?  "":rs38.getText().toString() }'
                                 android:visibility='@{rs3899.checked ? View.GONE : View.VISIBLE }' />
 
                             <CheckBox
@@ -2220,7 +2241,7 @@
                                 android:hint="@string/numberhint"
                                 android:inputType="number"
                                 android:maxLength="4"
-                                android:text='@{rs2799.checked ?  "":rs27.getText.toString }'
+                                android:text='@{rs2799.checked ?  "":rs27.getText().toString() }'
                                 android:visibility='@{rs2799.checked ? View.GONE : View.VISIBLE }' />
 
                             <CheckBox
@@ -2278,7 +2299,7 @@
                                 android:hint="@string/numberhint"
                                 android:inputType="number"
                                 android:maxLength="4"
-                                android:text='@{rs2899.checked ?  "":rs28.getText.toString }'
+                                android:text='@{rs2899.checked ?  "":rs28.getText().toString() }'
                                 android:visibility='@{rs2899.checked ? View.GONE : View.VISIBLE }' />
 
                             <CheckBox
