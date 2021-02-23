@@ -7,19 +7,34 @@
     <color name="colorSecondaryDark">#29434e</color>
     <color name="colorSecondaryLight">#819ca9</color>
     <color name="colorAccent">#FF4081</color>
-    <color name="green">#4caf50</color>
-    <color name="white">#ffffff</color>
+    <color name="greenold">#4caf50</color>
     <color name="dullWhileOverlay">#99d6d6d6</color>
-    <color name="gray">#757575</color>
+    <color name="grayold">#757575</color>
     <color name="red">#ffff0000</color>
     <color name="ticker_red">#80ff0000</color>
     <!--Coppied-->
     <color name="black_overlay">#66000000</color>
     <color name="selectedBlue">#2b3581</color>
-    <color name="black">#ff000000</color>
+    <color name="blackold">#ff000000</color>
     <color name="grayOverlay">#7f7f7f7f</color>
     <color name="dullWhile">#d6d6d6</color>
     <color name="darkRed">#D50000</color>
     <color name="lightOrange">#FFE0B2</color>
+
+
+    <!-- Standard App Colors -->
+    <color name="grayDark">#5e5e5e</color>
+    <color name="grayLight">#efefef</color>
+    <color name="greenLight">#d600ef00</color>
+    <color name="redLight">#d6ef0000</color>
+    <color name="black">#000000</color>
+    <color name="white">#ffffff</color>
+    <color name="gray">#7f7f7f</color>
+    <color name="green">#009900</color>
+    <color name="redOverlay">#7f990000</color>
+    <color name="blackOverlay">#7f000000</color>
+    <color name="whiteOverlay">#7fffffff</color>
+    <color name="redDark">#990000</color>
+    <color name="lightPink">#EEE4C4BA</color>
 
 </resources>

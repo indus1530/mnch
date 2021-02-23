@@ -9,7 +9,7 @@
 
         <variable
             name="callback"
-            type="edu.aku.ramshasaeed.mnch.activities.Rsd05" />
+            type="edu.aku.abdulsajid.uenMnch.activities.Rsd05" />
     </data>
 
     <ScrollView
@@ -76,7 +76,7 @@
                                 android:hint="@string/numberhint"
                                 android:inputType="number"
                                 android:maxLength="4"
-                                android:text='@{rs3499.checked ?  "":rs34.getText.toString }'
+                                android:text='@{rs3499.checked ?  "":rs34.getText().toString() }'
                                 android:visibility='@{rs3499.checked ? View.GONE : View.VISIBLE }' />
 
                             <CheckBox
@@ -146,7 +146,7 @@
                                 android:hint="@string/numberhint"
                                 android:inputType="number"
                                 android:maxLength="4"
-                                android:text='@{rs3199.checked ?  "":rs31.getText.toString }'
+                                android:text='@{rs3199.checked ?  "":rs31.getText().toString() }'
                                 android:visibility='@{rs3199.checked ? View.GONE : View.VISIBLE }' />
 
                             <CheckBox
@@ -285,7 +285,7 @@
                                 android:hint="@string/numberhint"
                                 android:inputType="number"
                                 android:maxLength="4"
-                                android:text='@{rs2799.checked ?  "":rs27.getText.toString }'
+                                android:text='@{rs2799.checked ?  "":rs27.getText().toString() }'
                                 android:visibility='@{rs2799.checked ? View.GONE : View.VISIBLE }' />
 
                             <CheckBox
@@ -343,7 +343,7 @@
                                 android:hint="@string/numberhint"
                                 android:inputType="number"
                                 android:maxLength="4"
-                                android:text='@{rs2899.checked ?  "":rs28.getText.toString }'
+                                android:text='@{rs2899.checked ?  "":rs28.getText().toString() }'
                                 android:visibility='@{rs2899.checked ? View.GONE : View.VISIBLE }' />
 
                             <CheckBox
@@ -403,7 +403,7 @@
                                 android:hint="@string/numberhint"
                                 android:inputType="number"
                                 android:maxLength="4"
-                                android:text='@{rs3599.checked ?  "":rs35.getText.toString }'
+                                android:text='@{rs3599.checked ?  "":rs35.getText().toString() }'
                                 android:visibility='@{rs3599.checked ? View.GONE : View.VISIBLE }' />
 
                             <CheckBox
@@ -543,7 +543,7 @@
                                 android:hint="@string/numberhint"
                                 android:inputType="number"
                                 android:maxLength="4"
-                                android:text='@{rs3299.checked ?  "":rs32.getText.toString }'
+                                android:text='@{rs3299.checked ?  "":rs32.getText().toString() }'
                                 android:visibility='@{rs3299.checked ? View.GONE : View.VISIBLE }' />
 
                             <CheckBox
