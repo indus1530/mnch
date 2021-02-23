@@ -50,9 +50,9 @@ public abstract class GeneratorClass {
 
                     if (rdbID != -1) {
 
-                        for (byte j = 0; j < ((RadioGroup) view).getChildCount(); j++) {
+                        for (byte j = 0; j < rdp.getChildCount(); j++) {
 
-                            if (rdbID == ((RadioGroup) view).getChildAt(j).getId()) {
+                            if (rdbID == rdp.getChildAt(j).getId()) {
 
                                 RadioButton rdb = rdp.findViewById(((RadioGroup) view).getChildAt(j).getId());
 
